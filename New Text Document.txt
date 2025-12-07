@@ -1,0 +1,22 @@
+I have to create a react.js website for 'metric management system'. Keep things simple also Make the website compatible for vercel to deploy.
+
+Requirements:-
+1. The home page has two options "User login" and "Admin login". For now there is no authentication required.
+2. If the User login is clicked a new page is opened which contains boxes like names of recently created metrics, pending approval metrics, etc, for now just a text holder will do. On the top there should be two options:a. create a new metric b. edit an existing metric.
+3. If the user clicks new metric a new page opens that has an option to upload a dataset which can be viewed and the column header can be selected for designating it a metric and a right sidebar opens in which these fields are required to be filled in order to create a metric contract.These are the fields:A. Metric Identity
+Global metadata identifying the metric including name, UUID, domain/department classification, category (Revenue, Engagement, Risk), type (Count, Sum, Ratio, Derived, Windowed), status (Draft, In Review, Certified, Deprecated), version, business owner, and technical steward.
+B. Business Definition
+Dataset-agnostic description containing plain-English explanation, business purpose, use cases, exclusion scenarios, unit of measure (currency, count, percent), and interpretation rules for rounding, negative values, and time cutoffs.
+C. Abstract Business Formula
+Portable formula defining abstract inputs (e.g., transaction_amount, refund_amount), aggregation logic (sum, avg, count), window logic, and business-level exclusion and filter rules—all independent of physical table names. 
+
+4. When the fields are filed the column needed to be choose as a metric should be selected, which will be saved in the metric contract automatically.
+5. When all the things are done the user should be able to click on abutton named "Create Metric" placed at a suitable location on the page.
+6. Once the create metric button is clicked the user is send back to the page described in the second point. And a pop up appears that the new metric contract has been sent to the admin for review.
+7. If the user clicks edit a existing metric a new page opens where there is a list of all available approved metrics in the metric management system. The user has the capacity to search a metric by department, metric name etc. For now create a dummy list of metric contract to show.And just for clearity all the dummy metrics have the same fields as described earlier.
+8. If "Admin login" is clicked a new home page of te admin is openened which has a view of all the pending approvals from the create metric page. For this prototype actually store the metric created in the admin view.
+9. For approving the admin must click on the metric to be approved showcased in the home page of the admin view, after clicking the admin has the ability to view all the details mentioned in the contract and scrolling down if needed has a button named "Approve".
+10. Once the "approve" button is clicked a new pop up opens in the middle of the page in which the name of the admin is required to be entered. Once, that is done the admin goes back to the home page of the admin page.
+11. Remember to have a logout button somewhere for both the user and the admin after they have loggin in.
+
+

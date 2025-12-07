@@ -1,0 +1,108 @@
+.create-metric-page {
+    min-height: 100vh;
+    background: var(--bg-primary);
+}
+
+.create-metric-container {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: var(--spacing-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.main-content {
+    min-height: 400px;
+}
+
+.sidebar {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    position: sticky;
+    top: 100px;
+}
+
+.metric-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.form-section {
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border);
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.form-section h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary);
+    font-size: 1.25rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.selected-columns-info {
+    padding: var(--spacing-md);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--primary);
+}
+
+.selected-columns-info h4 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
+}
+
+.columns-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: var(--spacing-md);
+}
+
+.success-modal {
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.success-modal h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.success-modal p {
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+    .create-metric-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        max-height: none;
+    }
+}
